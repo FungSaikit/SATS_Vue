@@ -22,10 +22,12 @@ new Vue({
 
 new Vue({
   el: '#header',
+  router,
   render: h => h(Header)
 })
 
 new Vue({
   el: '#footer',
+  router,
   render: h => h(Footer)
 })
