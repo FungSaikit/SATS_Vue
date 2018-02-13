@@ -13,6 +13,58 @@
                 <button>搜索</button>
             </div>
         </div>
+
+        <div class="filter_block">
+            <div class="filter">
+                <span class="filter_type">楼盘</span>
+                <input type="checkbox" id="housingproject0"><label for="housingproject0">城启荔港南湾</label> 
+                <input type="checkbox" id="housingproject1"><label for="housingproject1">富力半岛花园</label> 
+            </div>
+            <div class="filter">
+                <span class="filter_type">售价</span>
+                <input type="checkbox" id="price0"><label for="price0">100万以下</label> 
+                <input type="checkbox" id="price1"><label for="price1">100-200万</label> 
+                <input type="checkbox" id="price2"><label for="price2">200-400万</label> 
+                <input type="checkbox" id="price3"><label for="price3">400-600万</label> 
+                <input type="checkbox" id="price4"><label for="price4">600-1000万</label> 
+                <input type="checkbox" id="price5"><label for="price5">1000万以上</label>                          
+            </div>
+            <div class="filter">
+                <span class="filter_type">面积</span>
+                <input type="checkbox"><span>40平以下</span>
+                <input type="checkbox"><span>40-60平</span>
+                <input type="checkbox"><span>60-80平</span>
+                <input type="checkbox"><span>80-100平</span>
+                <input type="checkbox"><span>100-120平</span>
+                <input type="checkbox"><span>120-150平</span>
+                <input type="checkbox"><span>150-200平</span>                
+                <input type="checkbox"><span>200平以上</span>                
+            </div>
+            <div class="filter">
+                <span class="filter_type">房型</span>
+                <input type="checkbox"><span>一室</span>
+                <input type="checkbox"><span>二室</span>
+                <input type="checkbox"><span>三室</span>
+                <input type="checkbox"><span>四室</span>
+                <input type="checkbox"><span>五室</span>
+            </div>
+            <div class="filter">
+                <span class="filter_type">用途</span>
+                <input type="checkbox"><span>普通住宅</span>
+                <input type="checkbox"><span>别墅</span>
+                <input type="checkbox"><span>商用</span>
+                <input type="checkbox"><span>商住两用</span>
+                <input type="checkbox"><span>四合院</span>
+            </div>
+        </div>
+        <h3 class="result_tips">共找到<span class="blue">102</span>套房子</h3>
+        <div class="houselist_block">
+
+            <div class="house flex">
+
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -23,7 +75,8 @@ export default {
     return {
         placeholder: '请输入您感兴趣的地区或者楼盘',
         type: this.$route.params.type,
-        keyword: ""
+        keyword: '',
+        housingProduct: []
     };
   }, 
   methods: {
@@ -37,8 +90,44 @@ export default {
 
 <style scoped>
 
-.search_block {
+h3 {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
     margin-top: 10px;
+}
+
+.house_list {
+    padding-top: 20px;
+}
+
+.search_block {
+    width: 1000px;
+}
+
+.filter_block {
+    margin: auto;
+    width: 980px;
+    padding: 10px 0;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #f6f6f6;
+}
+
+.filter {
+    line-height: 30px;
+    border-bottom: 1px solid lightgray;
+    font-size: 13px;
+}
+
+.filter input {
+    vertical-align: middle;
+    margin: 0 5px 0 10px;
+}
+
+.filter_type {
+    font-weight: bold;
 }
 
 .searcher {
@@ -111,6 +200,19 @@ export default {
 .search_type_selected {
     color: #fff;
     background-color: #4BA2F9;
+}
+
+.houselist_block {
+    margin-top: 20px;
+    width: 1000px;
+    text-align: left;
+}
+
+.house {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+    height: 200px;
+    width: 1000px;
 }
 
 </style>

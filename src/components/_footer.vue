@@ -25,7 +25,7 @@ export default {
 
   .footer_inner {
     width: 1000px;
-    height: 100px;
+    height: 70px;
     margin: auto;
     color: #fff;
     background-color: #46a0fc;
