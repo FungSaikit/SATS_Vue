@@ -4,7 +4,7 @@
       <div class="block">
         <el-carousel height="400px" :autoplay="true">
           <el-carousel-item v-for="(item,index) in swiper" :key="index">
-            <img :src="item" class="swiper_img" />
+            <img :src="item" class="swiper_img">
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -52,7 +52,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆 珠江颐德公馆 珠江颐德公馆 珠江颐德公馆 珠江颐德公馆'
@@ -60,7 +60,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -68,7 +68,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -76,7 +76,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -84,7 +84,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -98,7 +98,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -106,7 +106,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -114,7 +114,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'
@@ -122,7 +122,7 @@ export default {
           {
               time: '2017-12-22',
               title: '[出售]尚东柏悦府 430㎡4室2厅3卫1厨'
-          }, 
+          },
           {
               time: '2018-1-1',
               title: '[出租]珠江颐德公馆'

@@ -4,11 +4,13 @@
         <div class="search" :class="{ hidden: this.$route.path!='/index' }">
           <el-input v-model="input" placeholder="请输入房屋信息" size="30" ></el-input>
         </div>
-        <div class="website_name">二手房交易系统</div>
-        <div class="website_engname">Secondhand Apartment Trading System</div>
+        <div class="header_title">
+          <div class="website_name">二手房交易系统</div>
+          <div class="website_engname">Secondhand Apartment Trading System</div>
+        </div>
       </div>
       <el-menu :default-active="activeIndex" class="el-menu" mode="horizontal" @select="handleSelect" router="true">
-        <el-menu-item index="/index">主页</el-menu-item>
+        <el-menu-item index="/">主页</el-menu-item>
         <el-submenu index="/house_list/0">
             <template slot="title">我在找房</template>
             <el-menu-item index="/house_list/0">我要买房</el-menu-item>
@@ -55,6 +57,7 @@ export default {
 </script>
 
 <style scoped>
+
 .header {
   width: 100%;
   height: auto;
@@ -62,11 +65,17 @@ export default {
 }
 
 .header_inner {
-  width: 1000px;
+  width: 100%;
+  min-width: 1000px;
   height: 100px;
   margin: auto;
   background-color: #46a0fc;
   overflow: hidden;
+}
+
+.header_title {
+  width: 1000px;
+  margin: auto;
 }
 
 .website_name {
