@@ -106,7 +106,7 @@
             <th>上次交易</th>
             <td>{{ house.last_trade }}</td>
             <th>房屋用途</th>
-            <td>{{ house.usage }}</td>
+            <td>{{ house.house_usage==1?'普通住宅':house.house_usage==2?'别墅':house.house_usage==3?'商用':house.house_usage==4?'商住两用':'四合院' }}</td>
           </tr>
           <tr>
             <th></th>
