@@ -7,6 +7,9 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Header from './components/_header'
 import Footer from './components/_footer'
+import axios from 'axios'
+
+Vue.prototype.$ajax = axios
 
 Vue.config.productionTip = false
 
