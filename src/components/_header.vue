@@ -21,13 +21,13 @@
       <el-menu-item index="/">主页</el-menu-item>
       <el-submenu index="/house_list/0">
         <template slot="title">我在找房</template>
-        <el-menu-item index="/house_list/0">我要租房</el-menu-item>
         <el-menu-item index="/house_list/1">我要买房</el-menu-item>
+        <el-menu-item index="/house_list/0">我要租房</el-menu-item>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">我有房子</template>
-        <el-menu-item index="2-1">我要出售</el-menu-item>
-        <el-menu-item index="2-2">我要出租</el-menu-item>
+        <el-menu-item index="/post_house/1">我要出售</el-menu-item>
+        <el-menu-item index="/post_house/0">我要出租</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">买家中心</template>

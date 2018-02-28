@@ -18,7 +18,7 @@
             <span class="rmb">{{ house.price/10000 }}</span>万
           </div>
           <div class="average_price">
-            <div class="q0">{{ house.unit_price }}元/平米</div>
+            <div class="q0">{{ parseInt(house.unit_price) }}元/平米</div>
             <div class="q1">首付90万 税费6万(仅供参考) <a href="#">详情</a></div>
           </div>
         </div>
@@ -330,6 +330,11 @@
   margin-bottom: 10px;
 }
 
+.el-carousel__container img {
+  width: 600px;
+  height: 300px;
+}
+
 </style>
 
 <script>
@@ -354,6 +359,7 @@ export default {
         res.data.post_time = res.data.post_time.slice(0, 10);
         res.data.last_trade = res.data.last_trade.slice(0, 10);
         that.house = res.data;
+        that.swiperPic = JSON.parse(res.data.image)
       });
     this.$ajax
       .get("http://localhost:3333/house/getHouseFeedback?hid=" + this.$route.params.id)

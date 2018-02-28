@@ -42,7 +42,7 @@ export default new Router({
       component: Login
     }, 
     {
-      path: '/post_house/:id', 
+      path: '/post_house/:ifs', 
       name: '发布房源',
       component: PostHouse
     }

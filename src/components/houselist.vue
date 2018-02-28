@@ -66,7 +66,7 @@
 
       <div class="house flex" v-for="item in houseList" :key="item.id" :hid="item.id" @click="houseDetails">
         <div class="house_img">
-          <img src="">
+          <img :src="JSON.parse(item.image)[0]">
         </div>
         <div class="house_info fg">
           <div class="house_title">{{ item.title }}</div>
@@ -79,7 +79,7 @@
         </div>
         <div class="house_price">
           <div class="price">¥ <span class="rmb">{{ item.price/10000 }}</span> 万</div>
-          <div class="unitprice">单价 <span style="font-weight: bold;">{{ item.unit_price }}</span> 元/平米</div>
+          <div class="unitprice">单价 <span style="font-weight: bold;">{{ parseInt(item.unit_price) }}</span> 元/平米</div>
         </div>
       </div>
 
