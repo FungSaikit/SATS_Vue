@@ -62,7 +62,7 @@
       </div>
     </div>
     <h3 class="result_tips">共找到<span class="blue">{{ resultCount }}</span>套房子</h3>
-    <div class="houselist_block">
+    <div class="houselist_block" v-loading="loading">
 
       <div class="house flex" v-for="item in houseList" :key="item.id" :hid="item.id" @click="houseDetails">
         <div class="house_img">
@@ -107,7 +107,8 @@ export default {
       currentPage: 1,
       houseList: [],
       total: 0,
-      resultCount: 0
+      resultCount: 0,
+      loading: false
     };
   },
   methods: {
@@ -121,6 +122,7 @@ export default {
     },
     getList: function () {
       var that = this;
+      this.loading = true;
       var queryString = 'http://localhost:3333/house/getHouseList?page=' + this.currentPage + '&keyword=' + this.keyword + '&isForSell=' + this.isForSell;
       if ( this.price != 0 ) {
         var priceArray = this.price.split('-');
@@ -146,6 +148,7 @@ export default {
         that.resultCount = res.data.count;
         that.houseList = res.data.list;
         that.total = res.data.count;
+        that.loading = false;
       });
     }, 
     changeType: function(num) {
@@ -281,6 +284,7 @@ h3 {
 .houselist_block {
   width: 1000px;
   text-align: left;
+  min-height: 200px;
 }
 
 .house {

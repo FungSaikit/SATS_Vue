@@ -1,5 +1,5 @@
 <template>
-  <div class="house_details">
+  <div class="house_details" v-loading="initing">
     <div class="general">
       <div class="title">{{ house.title }}</div>
       <div class="desc">{{ house.description }}</div>
@@ -348,7 +348,8 @@ export default {
         "/static/img/home2.jpg"
       ],
       house: {},
-      feedback: []
+      feedback: [],
+      initing: true
     };
   },
   created: function() {
@@ -359,7 +360,8 @@ export default {
         res.data.post_time = res.data.post_time.slice(0, 10);
         res.data.last_trade = res.data.last_trade.slice(0, 10);
         that.house = res.data;
-        that.swiperPic = JSON.parse(res.data.image)
+        that.swiperPic = JSON.parse(res.data.image);
+        that.initing = false;
       });
     this.$ajax
       .get("http://localhost:3333/house/getHouseFeedback?hid=" + this.$route.params.id)
