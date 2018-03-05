@@ -3,6 +3,9 @@
     <div class="general">
       <div class="title">{{ house.title }}</div>
       <div class="desc">{{ house.description }}</div>
+      <div class="border_bottom">
+        <el-button type="success" @click="bookThisHouse">预约此房</el-button>
+      </div>
     </div>
     <div class="flex">
       <div class="swiper">
@@ -186,7 +189,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .block {
   text-align: left;
 }
@@ -209,6 +212,12 @@
 
 .desc {
   color: gray;
+}
+
+.border_bottom {
+  padding-top: 10px;
+  height: 40px;
+  text-align: right;
 }
 
 .swiper {
@@ -369,6 +378,11 @@ export default {
         console.log(res.data);
         that.feedback = res.data;
       });
+  }, 
+  methods: {
+    bookThisHouse() {
+      this.$router.push('/book_house/' + this.$route.params.id);
+    }
   }
 };
 </script>

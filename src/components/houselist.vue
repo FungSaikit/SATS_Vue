@@ -154,6 +154,7 @@ export default {
     changeType: function(num) {
       this.isForSell = num;
       this.getList(); 
+      this.$router.push('/house_list/' + num);
     },
     houseDetails: function() {
       this.$router.push(
