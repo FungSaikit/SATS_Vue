@@ -8,12 +8,18 @@ import 'element-ui/lib/theme-chalk/index.css'
 import Header from './components/_header'
 import Footer from './components/_footer'
 import axios from 'axios'
+import BaiduMap from 'vue-baidu-map'
 
 Vue.prototype.$ajax = axios
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+
+Vue.use(BaiduMap, {
+  /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */
+  ak: 'X0P70CsWWECn3Gb7PeXZZOXjSa0hD8sk'
+})
 
 router.afterEach((to,from,next) => {
   window.scrollTo(0,0);

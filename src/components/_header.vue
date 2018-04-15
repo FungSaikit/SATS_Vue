@@ -31,16 +31,16 @@
       </el-submenu>
       <el-menu-item index="/customer_center">买家中心</el-menu-item>
       <el-menu-item index="/seller_center">卖家中心</el-menu-item>
-      <el-submenu index="5">
+      <!-- <el-submenu index="5">
         <template slot="title">个人中心</template>
         <el-menu-item index="5-1">房屋意向</el-menu-item>
         <el-menu-item index="5-2">修改资料</el-menu-item>
-      </el-submenu>
-      <el-submenu index="6">
+      </el-submenu> -->
+      <!-- <el-submenu index="6">
         <template slot="title">客户服务</template>
         <el-menu-item index="6-1">在线客服</el-menu-item>
         <el-menu-item index="6-2">问题反馈</el-menu-item>
-      </el-submenu>
+      </el-submenu> -->
       <el-menu-item :index="agentCenterIndex">经纪人中心</el-menu-item>
     </el-menu>
   </div>
